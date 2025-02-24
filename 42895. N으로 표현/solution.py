@@ -13,6 +13,9 @@ def calculate(first, second):
 
 
 def solution(N, number):
+    if (number == N):
+        return 1
+    
     dp = [set() for _ in range(8)]
 
     dp[0].add(N)
@@ -25,7 +28,5 @@ def solution(N, number):
         
         if number in dp[i]:
             return i + 1
-
+        
     return -1
-
-
