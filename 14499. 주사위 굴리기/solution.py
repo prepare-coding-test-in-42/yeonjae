@@ -24,8 +24,8 @@ def solution():
 
     for move in moves:
         # Calculate coordinates
-        new_row = row + directions[(move - 1) % 4][0]
-        new_col = col + directions[(move - 1) % 4][1]
+        new_row = row + directions[move - 1][0]
+        new_col = col + directions[move - 1][1]
 
         # Check if the dice is on the board
         if new_row < 0 or new_row > N - 1 or new_col < 0 or new_col > M - 1:
