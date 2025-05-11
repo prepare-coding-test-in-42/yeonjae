@@ -22,6 +22,7 @@ def solution():
         
         # 오른쪽 탐색
         for i in range(gear_idx + 1, 4):
+            # 이미 회전한 i - 1번 톱니바퀴와 지금 회전시킬지 말지 판단 중인 i번 톱니바퀴를 비교
             if gears[i - 1][2] != gears[i][6]:
                 rotate_dir[i] = -rotate_dir[i - 1]
             else:
